@@ -20,9 +20,26 @@ git clone https://github.com/rgxkokimoto/ProyecoAndroid.git
 // usar este comando os lleva y crea directamente la rama ponerlo con este formato "RAMA-NOMBRE"
 git checkout -b "RAMA-NOMBRE"
 
-// si veis que por error NO estais en vustra rama (AUNQUE SI NO TOCAIS NADA RARO N DEVERIA PASAR)
-git log -all -graph -oneline -decorate // podeis usar este comando para ver todas las ramas 
-// SI TENIES DUDAS DE EN QUE RAMA MOVEROS AVISARME ANTES 
+para ver las ramas
+'''
+git Branch 
+'''
+
+si no esta tu rama puede ser que solo esten en remotas haz 
+```
+git branch -r
+```
+
+te aparecerá algo como esto
+```
+origin/main
+origin/RAMA-ALEX
+```
+
+ahora muévete a TU rama usando este comando
+```
+git checkout -b RAMA-ALEX origin/RAMA-ALEX
+```
 
 // comando para moverse de rama no pongas el -b 
 git checkout "RAMA-NOMBRE"
