@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/marginGenVer">
+
+    <TextView
+        android:id="@+id/tvRegistroAl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/registro_de_nota"
+        android:textColor="@color/redUe"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <EditText
+        android:id="@+id/edSelAl"
+        android:hint="@string/selecciona_el_alumno"
+
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btnSlectAl"
+        app:layout_constraintTop_toBottomOf="@+id/tvRegistroAl"
+
+        android:layout_marginTop="@dimen/marginGenVer"
+        />
+
+    <Button
+        android:id="@+id/btnSlectAl"
+        android:backgroundTint="@color/redUe"
+        android:text="@string/selecciona_nel_alumno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintBottom_toBottomOf="@+id/edSelAl"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/btnSelAss"
+        app:layout_constraintTop_toTopOf="@+id/edSelAl"
+
+        android:onClick="seletAlum"
+
+        />
+
+    <EditText
+        android:id="@+id/edSelAss"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:hint="@string/selecciona_la_asignatura"
+        app:layout_constraintEnd_toStartOf="@id/btnSelAss"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edSelAl"
+
+        android:layout_marginTop="@dimen/marginGenVer"
+        />
+
+    <Button
+        android:id="@+id/btnSelAss"
+        android:text="@string/seleccionar_nasignatura"
+        android:backgroundTint="@color/redUe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintBottom_toBottomOf="@+id/edSelAss"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/edSelAss"
+        android:onClick="seletAss"
+        />
+
+    <EditText
+        android:id="@+id/edNotaExam"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:hint="@string/nota_examen"
+        app:layout_constraintEnd_toStartOf="@id/edNotaActividades"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edSelAss"
+
+        android:layout_marginTop="@dimen/marginGenVer"
+        />
+
+    <EditText
+        android:id="@+id/edNotaActividades"
+        android:hint="@string/nota_de_actividades"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintBottom_toBottomOf="@+id/edNotaExam"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/edNotaExam"
+        app:layout_constraintTop_toTopOf="@+id/edNotaExam"
+
+        android:layout_marginStart="@dimen/marginGenVer"
+        />
+
+    <Button
+        android:id="@+id/btnCalNot"
+        android:backgroundTint="@color/redUe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/calcular_nnota"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edNotaExam"
+
+        android:layout_marginTop="25dp"
+        android:onClick="calcularNota"
+        />
+
+    <EditText
+        android:id="@+id/edVacio"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintBottom_toBottomOf="@+id/btnCalNot"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnCalNot"
+        app:layout_constraintTop_toTopOf="@+id/btnCalNot"
+
+        />
+
+    <Button
+        android:id="@+id/btnSaveDta"
+        android:backgroundTint="@color/redUe"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/guardar_ndatos"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btnClearDta"
+        app:layout_constraintStart_toStartOf="parent"
+
+        android:onClick="guardarDta"
+        />
+
+    <Button
+        android:id="@+id/btnClearDta"
+        android:text="@string/limpiar_ndatos"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/redUe"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btnSaveDta"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        android:layout_marginStart="@dimen/marginGenVer"
+        android:onClick="limpiarDta"
+        />
+    
+
+</androidx.constraintlayout.widget.ConstraintLayout>

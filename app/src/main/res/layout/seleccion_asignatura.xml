@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    >
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/selecci_n_asignatura"
+        android:textColor="@color/redUe"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnPmdm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+
+        android:paddingTop="0dp"
+        android:paddingBottom="0dp"
+        android:text="@string/pmdm"
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_Size_AsigBtns"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/btnAsgAd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+
+        android:paddingTop="0dp"
+        android:paddingBottom="0dp"
+        android:text="@string/ad"
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_Size_AsigBtns"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnPmdm" />
+
+    <Button
+        android:id="@+id/btnAsgPsp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+
+        android:paddingTop="0dp"
+        android:paddingBottom="0dp"
+        android:text="@string/psp"
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_Size_AsigBtns"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnAsgAd" />
+
+    <Button
+        android:id="@+id/btnAsgDi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+
+        android:paddingTop="0dp"
+        android:paddingBottom="0dp"
+        android:text="@string/di"
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_Size_AsigBtns"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnAsgPsp" />
+
+    <Button
+        android:id="@+id/btnAsgSge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+
+        android:paddingTop="0dp"
+        android:paddingBottom="0dp"
+        android:text="@string/sge"
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_Size_AsigBtns"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnAsgDi" />
+
+    <Button
+        android:id="@+id/btnAsgIacc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+
+        android:paddingTop="0dp"
+        android:paddingBottom="0dp"
+        android:text="@string/iacc"
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_Size_AsigBtns"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnAsgSge" />
+
+    <Button
+        android:id="@+id/btnAsgIos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:paddingTop="0dp"
+        android:paddingBottom="0dp"
+        android:text="@string/ios"
+        android:gravity="start"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_Size_AsigBtns"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnAsgIacc" />
+
+
+    <EditText
+        android:id="@+id/edSelAss"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="50dp"
+
+        />
+
+    <Button
+        android:id="@+id/btnAceptar"
+        android:backgroundTint="@color/redUe"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/aceptar"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btnCancel"
+        app:layout_constraintStart_toStartOf="parent"
+
+        />
+
+    <Button
+        android:id="@+id/btnCancel"
+        android:text="@string/cancelar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/redUe"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btnAceptar"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        android:layout_marginStart="@dimen/marginGenVer"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
